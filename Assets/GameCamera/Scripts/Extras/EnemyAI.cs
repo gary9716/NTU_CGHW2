@@ -68,6 +68,7 @@ namespace RG_GameCamera.Extras
             if (!player || player.IsDead)
             {
                 animState = AnimationState.Idle;
+				Aggresive = false;
             }
 
             UpdateAnimState();

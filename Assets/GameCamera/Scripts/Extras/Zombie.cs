@@ -12,6 +12,7 @@ namespace RG_GameCamera.Extras
     {
         private Animator animator;
         private bool injured;
+		public bool cleanSelf;
 
         protected override void Start()
         {
@@ -82,6 +83,14 @@ namespace RG_GameCamera.Extras
 
             corpseCounter++;
             deadTimeout = 0.0f;
+			if (cleanSelf) {
+				Invoke ("destroySelf", 3);
+			}
         }
+
+		void destroySelf() {
+			Destroy (gameObject);
+		}
+
     }
 }

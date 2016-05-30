@@ -26,7 +26,8 @@ namespace RG_GameCamera.CharacterController
         /// <summary>
         /// dead flag
         /// </summary>
-        protected bool Dead;
+		[HideInInspector]
+		public bool Dead;
 
         /// <summary>
         /// is this entity dead?
